@@ -1,0 +1,46 @@
+<div class="container-fluid h-100 d-flex flex-column">
+  <!--Heading-->
+  <header class="row justify-content-center pt-5 px-5">
+    <div class="col-4 col-lg-3 col-xl-2 d-flex flex-column justify-content-end">
+      <img src="/assets/img/eat-da-burger-bust.svg" alt="A guy stuffing his face with a burger">
+    </div>
+    <div class="col-12 col-md-8 col-lg-6 d-flex flex-column justify-content-center">
+      <h1 id="title" class="text-center text-md-left py-3">Eat&nbsp;Da <span id="burger-title">Burger</span></h1>
+      <form id="add-burger" class="pb-3">
+        <div class="form-group">
+          <label for="burger-name">Burger name:</label>
+          <div class="input-group">
+            <input type="text" id="burger-name" class="form-control" name="burger-name" maxlength="75" required>
+              <div class="input-group-append">
+                <button id="submit-burger" type="submit" class="btn">Submit Burger</button>
+              </div>
+          </div>
+          <small id="character-limit" class="form-text text-muted">Max 75 characters</small>
+        </div>
+      </form>
+    </div>
+  </header>
+  <!--Main-->
+  <main class="row flex-grow-1">
+    <div id="to-devour-list" class="col-12 col-xl p-3 pt-5 p-lg-5">
+      <h2 class="h1 text-center">Burgers To Be Devoured</h2>
+      <ul>
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> burgers/burger-block was-devoured=false}}
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    <div id="devoured-list" class="col-12 col-xl p-3 pt-5 p-lg-5">
+      <h2 class="h1 text-center">Burgers Devoured</h2>
+      <ul>
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> burgers/burger-block was-devoured=true}}
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </main>
+</div>

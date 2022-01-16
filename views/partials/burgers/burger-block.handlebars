@@ -1,0 +1,9 @@
+<li data-id="{{id}}" {{#unless was-devoured}}data-newdevoured="true"{{/unless}} class="d-flex align-items-center">
+  <i class="fas {{#if was-devoured}}fa-grin-hearts{{else}}fa-hamburger{{/if}} mr-3"></i>
+  {{burger_name}}
+  {{#if was-devoured}}
+  <button class="delete ml-auto btn">Delete<i class="fas fa-trash-alt ml-3"></i></button>
+  {{else}}
+  <button class="devour ml-auto btn">Devour!<i class="fas fa-arrow-alt-circle-right ml-3"></i></button>
+  {{/if}}
+</li>

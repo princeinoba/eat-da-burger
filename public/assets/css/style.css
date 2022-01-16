@@ -1,0 +1,102 @@
+/*
+Light yellow: #FBF5E4
+Yellow: #FFD89C
+Dark yellow: #4A3D1A
+
+Dark brown: #4A371A
+Brown: #6F4220
+Light brown: #BC6F35
+
+Red: #FF9494
+Dark red: #4A1A1A
+*/
+
+/*Font*/
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600&display=swap');
+
+/* Colours */
+body {
+  background-color: #FBF5E4;
+  color: #4A371A;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.2rem;
+}
+
+#to-devour-list {
+  background-color: #FFD89C;
+  color: #4A3D1A;
+}
+
+#devoured-list {
+  background-color: #FF9494;
+  color: #4A1A1A;
+}
+
+/* Text */
+h1, h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+h1 {
+  font-size: 3em;
+}
+.h1 {
+  font-weight: 600;
+}
+label, small, p, .devour, .delete {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+/*List items*/
+ul, .devour, .delete {
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+li {
+  background-color: rgba(255,255,255,0.5);
+  list-style-type: none;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/* Title */
+#title {
+  line-height: 80%;
+}
+#burger-title {
+  color: #BC6F35;
+}
+
+/* Form */
+#submit-burger {
+  background-color: #4A371A;
+  color: white;
+}
+
+#submit-burger:hover,
+#submit-burger:focus {
+  background-color: #6F4220;
+}
+
+/*li buttons*/
+.devour, .delete {
+  padding-left: 1rem;
+  border-radius: 0;
+}
+.devour:hover,
+.devour:focus,
+.delete:hover,
+.delete:focus  {
+  color: #BC6F35;
+}
+.devour {
+  color: #4A3D1A;
+  border-left: 1px solid #4A3D1A;
+}
+.delete {
+  color: #4A1A1A;
+  border-left: 1px solid #4A1A1A;
+}

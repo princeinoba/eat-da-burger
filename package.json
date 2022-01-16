@@ -1,0 +1,24 @@
+{
+  "name": "bootcamp-burger",
+  "version": "1.0.0",
+  "description": "A burger logger to keep track of the burgers you want to eat!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angelicamapeso/bootcamp-burger.git"
+  },
+  "author": "Angelica Mapeso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angelicamapeso/bootcamp-burger/issues"
+  },
+  "homepage": "https://github.com/angelicamapeso/bootcamp-burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql2": "^2.2.5"
+  }
+}
