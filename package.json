@@ -1,24 +1,19 @@
 {
-  "name": "bootcamp-burger",
+  "name": "burgerforge-ai",
   "version": "1.0.0",
-  "description": "A burger logger to keep track of the burgers you want to eat!",
-  "main": "server.js",
+  "private": true,
+  "type": "module",
+  "description": "A local-first AI burger idea builder, tasting board, and portfolio demonstration.",
+  "engines": { "node": "24.x" },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/angelicamapeso/bootcamp-burger.git"
-  },
-  "author": "Angelica Mapeso",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/angelicamapeso/bootcamp-burger/issues"
-  },
-  "homepage": "https://github.com/angelicamapeso/bootcamp-burger#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "express-handlebars": "^5.2.0",
-    "mysql2": "^2.2.5"
+    "dev": "npm run build && node scripts/dev-server.mjs",
+    "lint": "node scripts/lint.mjs",
+    "test": "node --test",
+    "build": "node scripts/build.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "verify:build": "node scripts/verify-build.mjs",
+    "verify:determinism": "node scripts/verify-determinism.mjs",
+    "verify": "npm run lint && npm test && npm run build && npm run verify:build && npm run smoke && npm run verify:determinism",
+    "check": "npm run verify"
   }
 }

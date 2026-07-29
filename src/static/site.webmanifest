@@ -1,0 +1,14 @@
+{
+  "name": "BurgerForge AI",
+  "short_name": "BurgerForge",
+  "description": "A local-first AI burger idea builder, Devour Board and private Tasting Journal.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fff8ed",
+  "theme_color": "#f0502f",
+  "icons": [
+    { "src": "/assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

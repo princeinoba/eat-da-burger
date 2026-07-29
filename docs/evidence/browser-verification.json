@@ -1,0 +1,52 @@
+{
+  "verifiedAt": "2026-07-29T21:32:42.381Z",
+  "origin": "http://127.0.0.1:4187",
+  "routeViewportChecks": 40,
+  "routes": 10,
+  "viewports": [
+    "390x844",
+    "768x1024",
+    "1440x900",
+    "1536x1024"
+  ],
+  "flows": {
+    "navigation": "pass",
+    "mobileMenuEscape": "pass",
+    "themePersistence": "pass",
+    "commandPalette": "pass",
+    "manualAdd": "pass",
+    "builderExactlyThree": "pass",
+    "explicitGeneratedAdd": "pass",
+    "curatedSearchAdd": "pass",
+    "boardCountsFiltersDevourUndo": "pass",
+    "exportMalformedImport": "pass",
+    "journalRatingNotePersistence": "pass",
+    "serviceWorker": "pass",
+    "offlineNavigation": "pass",
+    "apiCacheExcluded": "pass"
+  },
+  "accessibilityEquivalent": {
+    "oneMainAndH1": "pass",
+    "namedButtons": "pass",
+    "labeledControls": "pass",
+    "duplicateIds": 0,
+    "horizontalOverflowDefects": 0
+  },
+  "unexpectedConsoleErrors": 0,
+  "designed404ConsoleMessages": 5,
+  "pageErrors": 0,
+  "unexpectedFailedRequests": 0,
+  "cspViolations": 0,
+  "unexpectedBoardJournalNetworkWrites": 0,
+  "serviceWorkerRegistrations": 1,
+  "screenshots": [
+    "home-desktop.png",
+    "home-mobile.png",
+    "builder-desktop.png",
+    "ideas-desktop.png",
+    "board-mobile.png",
+    "journal-desktop.png",
+    "safety-desktop.png",
+    "404-mobile.png"
+  ]
+}

@@ -1,40 +1,95 @@
-# Eat Da Burger
+# BurgerForge AI
 
-<p align="middle">
-  <img src="./img/burger-logger-preview.png" width="70%">
-  <img src="./img/burger-logger-mobile.png" width="23%">
-</p>
+Build it. Stack it. Devour it.
 
-:link: [Go to the Burger Logger](https://fast-oasis-01993.herokuapp.com/index)
+BurgerForge AI is a local-first burger idea builder, Devour Board and private Tasting Journal. It is a clean-room evolution of the uploaded Eat Da Burger CRUD exercise and uses the uploaded Vercel AI SDK repository as an architectural reference rather than copying its monorepo.
 
-A burger logger, which tracks the burgers you want to eat or have eaten.
+## Product features
 
-Acceptance criteria, a file structure and high-level instructions were given for this assignment.
+- Manual burger entry.
+- AI Burger Builder with exactly three structured suggestions.
+- Deterministic provider-independent fallback.
+- Eight original curated burger blueprints.
+- User-controlled add-to-board action.
+- Queued and devoured states without page reloads.
+- Private ratings and tasting notes.
+- Export, import and clear controls.
+- Light, dark and system themes.
+- PWA manifest, service worker and offline route.
+- Food/AI safety and privacy pages.
+- GET health Function and POST suggestion Function.
 
-## Purpose
+## Important boundary
 
-This assignment is practice for working in the front-end and the back-end by performing simple queries to a database.
+BurgerForge produces creative concepts. It does not verify allergens, nutrition, medical diets, ingredient labels, cooking temperatures, cross-contact, restaurant availability or food safety.
 
-## Local Installation
+## Architecture
 
-1. Run `npm install` before using the application locally.
-2. Set up the database using the files found in [`db`](./db). A [`seeds.sql`](./db/seeds.sql) file is provided for dummy data.
-3. Configure the `user` and `password` properties found in [`connection.js`](./config/connection.js).
+```text
+static generated pages + local state + two Vercel Functions
+```
 
-## Built with
+The complete product works without any provider secret. When optional Vercel AI Gateway configuration is absent or fails, the Function returns three deterministic suggestions.
 
-### Back-End
+## Commands
 
-- [Node.js](https://nodejs.org/en/)
-- [Node MySQL 2](https://www.npmjs.com/package/mysql2)
-- [Express](https://expressjs.com/)
-- [Express Handlebars](https://www.npmjs.com/package/express-handlebars)
+```bash
+npm ci --ignore-scripts
+npm run dev
+npm run lint
+npm test
+npm run build
+npm run smoke
+npm run verify
+```
 
-### Front-end
+Local preview defaults to `http://127.0.0.1:4173`.
 
-- [Bootstrap](https://getbootstrap.com/)
-- [Font Awesome](https://fontawesome.com/)
+## Environment
 
-## License
+```text
+AI_GATEWAY_API_KEY=
+BURGERFORGE_AI_MODEL=
+BURGERFORGE_LIVE_AI=0
+SITE_URL=
+BURGERFORGE_PUBLIC_INDEXING=0
+```
 
-This project is licensed under the **MIT License**.
+Never use a browser-prefixed secret.
+
+## Routes
+
+```text
+/
+/builder/
+/ideas/
+/board/
+/journal/
+/about/
+/safety/
+/privacy/
+/offline/
+/404/
+```
+
+## APIs
+
+```text
+GET  /api/health
+POST /api/ai/burger-suggestions
+```
+
+## Documentation
+
+- `docs/audit-report.md`
+- `docs/architecture.md`
+- `docs/source-inventory.md`
+- `docs/owner-decisions.md`
+- `docs/verification-report.md`
+- `DEPLOYMENT.md`
+- `SECURITY.md`
+- `NOTICE.md`
+
+## Licence
+
+No clean-room source licence has been assigned. The historical project has conflicting ISC/MIT metadata and no included licence file. Resolve ownership and licensing before redistribution.
