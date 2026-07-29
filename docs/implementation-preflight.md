@@ -66,5 +66,6 @@ Direct verification found and corrected three clean-room candidate issues before
 2. Repeated inline SVG definition IDs were invalid on multi-illustration pages; artwork IDs are now deterministic and unique, with a build regression assertion.
 3. Journal save confirmation targeted a detached card after rerender; it now targets the newly rendered journal card and is visible to the user.
 4. Vercel file Functions receive Node request/response objects; a tested adapter now preserves the pure Fetch handler contract at that runtime boundary.
+5. Preview Lighthouse identified four contrast groups; primary actions, step numbers, dark-section links, and accent eyebrow text now meet the intended accessible contrast boundary.
 
 At preflight, no Vercel project named `burgerforge-ai` existed under `princeinobas-projects`; creating and linking exactly one project remains part of the release phase.

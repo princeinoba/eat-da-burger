@@ -26,11 +26,11 @@ physical HTML files: 11
 build assertions: 139 passed
 HTTP smoke assertions: 76 passed
 generated files: 27
-generated output: 214,639 bytes
+generated output: 214,729 bytes
 browser/shared JavaScript: 37,537 bytes
-CSS: 25,201 bytes
+CSS: 25,291 bytes
 deterministic generated-tree SHA-256:
-77989bea383ee334a8dfd786696ba3b078e31d10eddf79487672dd187011f13b
+3987a739030e52d5f7541ea61647e1658bb9be76dcacdbd9890d511918cf4fdd
 ```
 
 The complete local gate, `git diff --check`, and an independent clean-room install/audit/verify passed. The output remains below every release budget. No external package or untracked generated file is required.
@@ -83,6 +83,7 @@ Direct browser evidence found and fixed:
 
 - duplicate inline SVG definition IDs across repeated burger artwork;
 - the Journal save confirmation being written to a detached card after rerender.
+- insufficient contrast in primary actions, step numbers, dark-section links, and accent eyebrow text found by Preview Lighthouse.
 
 The build verifier now checks every physical HTML document for duplicate IDs.
 
