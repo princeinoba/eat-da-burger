@@ -15,6 +15,7 @@
 - Suggestion contract/fallback: `src/lib/suggestion-core.mjs`.
 - Board schema: `src/lib/board-core.mjs`.
 - API handlers: `src/server/handlers.mjs`.
+- Vercel Node/Fetch adapter: src/server/vercel-adapter.mjs.
 - Pages: `src/templates/pages.mjs`.
 - Design: `src/static/assets/site.css`.
 

@@ -1,5 +1,8 @@
-import { handleHealth } from "../src/server/handlers.mjs";
+﻿import { handleHealth } from "../src/server/handlers.mjs";
+import { handleVercelNodeRequest } from "../src/server/vercel-adapter.mjs";
+
 export const config = { runtime: "nodejs", maxDuration: 10 };
-export async function GET(request) { return handleHealth(request); }
-export async function POST(request) { return handleHealth(request); }
-export default handleHealth;
+
+export default function health(request, response) {
+  return handleVercelNodeRequest(request, response, handleHealth);
+}

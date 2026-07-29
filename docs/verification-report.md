@@ -1,4 +1,4 @@
-﻿# Verification report
+# Verification report
 
 ## Environment
 
@@ -17,10 +17,10 @@ npm ci --ignore-scripts: passed
 installed package records: 1
 external npm dependencies: 0
 npm audit --omit=dev: 0 vulnerabilities
-intended source files: 60
-JavaScript syntax files: 26 passed
-source/config policy files: 41 passed
-node:test tests: 21 passed, 0 failed
+intended source files: 62
+JavaScript syntax files: 28 passed
+source/config policy files: 43 passed
+node:test tests: 23 passed, 0 failed
 canonical documents: 10
 physical HTML files: 11
 build assertions: 139 passed
@@ -85,6 +85,8 @@ Direct browser evidence found and fixed:
 - the Journal save confirmation being written to a detached card after rerender.
 
 The build verifier now checks every physical HTML document for duplicate IDs.
+
+Preview runtime logs also proved that Vercel invokes file Functions with Node request/response objects. A tested boundary adapter now converts those objects to and from the shared Fetch contracts; both health and POST suggestion bodies have regression coverage.
 
 ## High-confidence policy and secret scan
 

@@ -1,5 +1,8 @@
-import { handleSuggestions } from "../../src/server/handlers.mjs";
+﻿import { handleSuggestions } from "../../src/server/handlers.mjs";
+import { handleVercelNodeRequest } from "../../src/server/vercel-adapter.mjs";
+
 export const config = { runtime: "nodejs", maxDuration: 15 };
-export async function POST(request) { return handleSuggestions(request); }
-export async function GET(request) { return handleSuggestions(request); }
-export default handleSuggestions;
+
+export default function burgerSuggestions(request, response) {
+  return handleVercelNodeRequest(request, response, handleSuggestions);
+}
